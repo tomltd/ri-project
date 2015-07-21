@@ -13,6 +13,7 @@ I've left some boilerplate below for you.
 */
 
 body {
+font-family: 'Lato', sans-serif;
 max-width:50em;
 margin-left: auto;
 margin-right: auto;
@@ -35,4 +36,9 @@ img {
 
 figcaption {
 	text-align: right;
+}
+
+.social-icons
+{
+	text-align: center;
 }
