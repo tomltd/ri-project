@@ -21,6 +21,12 @@ I've left some boilerplate below for you.
   width: 50%;
 }
 
+.papa-kiwi {
+  width: 200px;
+  margin-left:40px;
+  margin-bottom:10px;
+}
+
 body {
 font-family: 'Lato', sans-serif;
 font-weight: 400;
@@ -58,7 +64,7 @@ figcaption {
 }
 
 
-.header {
+#header-text {
 	text-align:right;
 	margin-top:100px;
 }
@@ -77,10 +83,4 @@ figcaption {
 	font-size:50px;
 	margin-bottom:5px;
 	color:#00AA72;
-}
-
-.papa-kiwi {
-  width: 200px;
-  margin-left:40px;
-  margin-bottom:10px;
 }
