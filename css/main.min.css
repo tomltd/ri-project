@@ -1,1 +1,1 @@
-body{max-width:50em;margin-left:auto;margin-right:auto}img{max-width:100%}figcaption{text-align:right}
+.header,figcaption{text-align:right}#header-container,img{max-width:100%}#header-container div{float:left;width:50%}body{font-family:Lato,sans-serif;font-weight:400;max-width:50em;margin-left:auto;margin-right:auto}h1,h2{color:#00AA72}.header{margin-top:100px}.social-flourish,.social-icons{text-align:center}.social-flourish{font-weight:100;text-transform:uppercase;font-size:50px;margin-bottom:5px;color:#00AA72}.papa-kiwi{width:200px;margin-left:40px;margin-bottom:10px}

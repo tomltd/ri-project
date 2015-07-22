@@ -36,6 +36,13 @@ article {
 
 h1, h2 {
 color:#00AA72;
+font-weight: 300;
+}
+
+h1 {
+
+    padding-right: 40px;
+
 }
 
 img {
@@ -47,6 +54,7 @@ img {
 
 figcaption {
 	text-align: right;
+  padding-right: 10px;
 }
 
 
@@ -55,6 +63,7 @@ figcaption {
 	margin-top:100px;
 }
 
+
 .social-icons
 {
 	text-align: center;
@@ -62,7 +71,7 @@ figcaption {
 
 .social-flourish
 {
-	font-weight: 100;
+	font-weight: 300;
 	text-transform: uppercase;
 	text-align:center;
 	font-size:50px;
