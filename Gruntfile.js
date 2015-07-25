@@ -96,7 +96,27 @@ cssmin: {
       ext: '.min.css'
     }]
   }
-}
+},
+
+    cwebp: {
+      static: {
+        files: {
+
+          'images/img-jpg.webp': 'images/img.jpg',
+        }
+      },
+      dynamic: {
+        options: {
+          q: 50
+        },
+        files: [{
+          expand: true,
+          cwd: 'images/',
+          src: ['**/*.{png,jpg,gif}'],
+          dest: 'images/'
+        }]
+      }
+    }
 
 
   });
@@ -106,7 +126,8 @@ cssmin: {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-mkdir');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+   grunt.loadNpmTasks('grunt-cwebp');
  /* grunt.loadNpmTasks('grunt-pagespeed');*/
-  grunt.registerTask('default', ['clean', 'mkdir', 'copy', 'responsive_images', 'cssmin']);
+  grunt.registerTask('default', ['cwebp', 'clean', 'mkdir', 'copy', 'responsive_images', 'cssmin']);
 
 };
