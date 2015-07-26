@@ -15,8 +15,8 @@ module.exports = function(grunt) {
           engine: 'im',
           sizes: [{
 
-            width: '1600px',
-            suffix: '-small',
+            width: '800px',
+            suffix: '-medium-x1',
             quality: 70
 
           }]
@@ -30,7 +30,7 @@ module.exports = function(grunt) {
           expand: true,
           src: ['*.{gif,jpg,png}'],
           cwd: 'images_src/',
-          dest: 'images/'
+          dest: 'images-dev/'
         }]
       }
     },
@@ -38,7 +38,7 @@ module.exports = function(grunt) {
     /* Clear out the images directory if it exists */
     clean: {
       dev: {
-        src: ['images'],
+        src: ['images-dev'],
       },
     },
 
@@ -46,7 +46,7 @@ module.exports = function(grunt) {
     mkdir: {
       dev: {
         options: {
-          create: ['images']
+          create: ['images-dev']
         },
       },
     },
@@ -57,7 +57,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           src: 'images_src/fixed/*.{gif,jpg,png}',
-          dest: 'images/'
+          dest: 'images-dev/'
         }]
       },
     },
@@ -98,25 +98,6 @@ cssmin: {
   }
 },
 
-    cwebp: {
-      static: {
-        files: {
-
-          'images/img-jpg.webp': 'images/img.jpg',
-        }
-      },
-      dynamic: {
-        options: {
-          q: 50
-        },
-        files: [{
-          expand: true,
-          cwd: 'images/',
-          src: ['**/*.{png,jpg,gif}'],
-          dest: 'images/'
-        }]
-      }
-    }
 
 
   });
@@ -126,8 +107,8 @@ cssmin: {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-mkdir');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
-   grunt.loadNpmTasks('grunt-cwebp');
- /* grunt.loadNpmTasks('grunt-pagespeed');*/
-  grunt.registerTask('default', ['cwebp', 'clean', 'mkdir', 'copy', 'responsive_images', 'cssmin']);
+/*   grunt.loadNpmTasks('grunt-cwebp');
+ grunt.loadNpmTasks('grunt-pagespeed');*/
+  grunt.registerTask('default', ['clean', 'mkdir', 'copy', 'responsive_images', 'cssmin']);
 
 };
