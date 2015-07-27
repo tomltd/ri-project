@@ -30,8 +30,16 @@
 
   <article>
 
-    <img src="images/still_life-800-medium-x1.jpg" alt="Still Life">
+   
 
+<!-- This needs updating -->
+ <picture>
+      <source media="(min-width: 800px)" srcset="images/still_life-800-medium-x1.jpg 1x, images/still_life-800-medium-x1.jpg.jpg 2x">
+
+      <source media="(min-width: 500px)" srcset="images/still_life-800-medium-x1.jpg.jpg 1x, images/still_life-800-medium-x1.jpg.jpg 2x">
+
+      <img src="images/still_life-800-medium-x1.jpg" alt="A photo of a still life">
+    </picture>
 
     <h2>My story</h2>
 
