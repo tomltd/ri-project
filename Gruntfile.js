@@ -12,7 +12,7 @@ module.exports = function(grunt) {
     responsive_images: {
       dev: {
         options: {
-          engine: 'im',
+          engine: 'gm',
           sizes: [{
 
             width: '1600px',
